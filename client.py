@@ -19,7 +19,10 @@ sock_service = socket.socket()
 
 sock_service.connect((SERVER_ADDRESS, SERVER_PORT))
 
-print("Connesso a " + str((SERVER_ADDRESS, SERVER_PORT)))
+print("Client connesso a " + str((SERVER_ADDRESS, SERVER_PORT)))
+protocollo = ("SYN", "SYN ACK", "ACK with Data", "ACK for Data")
+step = 0
+dati = str(step)
 while True:
     try:
         dati = input("Inserisci i dati da inviare (0 per terminare la connessione): ")
